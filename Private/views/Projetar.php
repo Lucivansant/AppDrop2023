@@ -1,3 +1,9 @@
+<?php
+$acao = "RECUPERAR_DESPESA";
+require_once '../RequirePrivate.php';
+
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -34,7 +40,7 @@
 
                     <div class="row">
                         <div class="col-md-3">
-                            <input type="text" class="form-control" placeholder="Custo Fixo" id="inputCusto">
+                            <input value="<?php echo $SomaDespesa->valor_despesa ?>" class="form-control" placeholder="Custo Fixo" id="inputCusto">
                         </div>
                         <div class="col-md-3">
                             <input type="text" class="form-control" placeholder="Custo do Produto" id="inputValor">
@@ -97,6 +103,8 @@
                     <a href="Cadastro.php"><i class="fa-regular fa-pen-to-square" id="icons"></i></a>
 
                     <a href="ListaProdutos.php"><i class="fa-solid fa-list" id="icons"></i></a>
+
+                    <a href="CustosGerais.php"><i class="fa-solid fa-chart-line" id="icons"></i></a>
                 </div>
             </div>
         </nav>

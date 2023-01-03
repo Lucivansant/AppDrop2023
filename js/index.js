@@ -24,3 +24,9 @@ function Lista() {
 function Deletar(id) {
     window.location.href = '../views/ListaProdutos.php?acao=DELETAR&id=' + id;
 }
+
+// ====================================================================
+
+function DeletarDespesa(id) {
+    window.location.href = '../views/CustosGerais.php?acao=DELETAR_DESPESA&id=' + id;
+}

@@ -35,29 +35,30 @@ require_once '../RequirePrivate.php';
             <div id="div-sec">
                 <i class="fa-solid fa-magnifying-glass"></i> Lista de produtos desejados
                 <hr>
-                <div id="painel-card">
+                <div id="painel-card" class="row">
                     <?php
                     foreach ($Produtos as $key => $Produto) {
                     ?>
-                        <div id="card-produto_<?php echo $Produto->id ?>">
-                            <div id="title-card">
-                                <h6 id="text-card"><?php echo $Produto->nome ?></h6>
+                        <div class="col-md-4">
+                            <div id="card">
+                                <div id="title-card">
+                                    <h6 id="text-card"><?php echo $Produto->nome ?></h6>
+                                </div>
+                                <p id="text-card">---------------------------</p>
+                                <p id="text-card">Valor: <b>R$<?php echo $Produto->valor ?></b></p>
+                                <p id="text-card">Categoria: <?php echo $Produto->categoria ?></p>
+                                <a href="<?php echo $Produto->link ?>" id="link">Link do produto...</a>
+                                <p id="text-card">---------------------------</p>
+                                <p id="text-card"><?php echo $Produto->descri ?></p>
+                                <hr>
+                                <button class="btn btn-danger col-6" onclick="Deletar(<?php echo $Produto->id ?>)"><i class="fa-solid fa-trash"></i></button>
+
                             </div>
-                            <br>
-                            <p id="text-card">Valor: <b>$<?php echo $Produto->valor ?></b></p>
-                            <p id="text-card">Categoria: <?php echo $Produto->categoria ?></p>
-                            <a href="<?php echo $Produto->link ?>">Link do produto...</a>
-                            <p id="text-card">-----------------------------------</p>
-
-                            <p id="text-card"><?php echo $Produto->descri ?></p>
-                            <p id="text-card">---------------------</p>
-
-                            <button class="btn btn-danger col-6" onclick="Deletar(<?php echo $Produto->id ?>)"><i class="fa-solid fa-trash"></i></button>
-                            <hr>
-
                         </div>
 
                     <?php } ?>
+
+
                 </div>
 
 
@@ -76,6 +77,8 @@ require_once '../RequirePrivate.php';
                     <a href="Cadastro.php"><i class="fa-regular fa-pen-to-square" id="icons"></i></a>
 
                     <a href="ListaProdutos.php"><i class="fa-solid fa-list" id="icons"></i></a>
+
+                    <a href="CustosGerais.php"><i class="fa-solid fa-chart-line" id="icons"></i></a>
                 </div>
             </div>
         </nav>

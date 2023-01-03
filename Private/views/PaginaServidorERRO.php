@@ -41,6 +41,8 @@
                     <a href="Cadastro.php"><i class="fa-regular fa-pen-to-square" id="icons"></i></a>
 
                     <a href="ListaProdutos.php"><i class="fa-solid fa-list" id="icons"></i></a>
+
+                    <a href="CustosGerais.php"><i class="fa-solid fa-chart-line" id="icons"></i></a>
                 </div>
             </div>
         </nav>
